@@ -1,10 +1,12 @@
-<h1 align="center">
-  Fancy and Blazing Fast start screen plugin of neovim
-</h1>
 
-| <center>Hyper</center> | <center>Doom</center> |
-| ---   | ---   |
-| <center><img src="https://user-images.githubusercontent.com/41671631/215015845-b13343c4-427e-45d6-9f92-267ab909eff1.png" width=80% height=80%/></center>|<center> <img src="https://user-images.githubusercontent.com/41671631/214518543-d7d6afbf-f405-4a6f-a505-568c5a101e92.png" width=80% height=80%/> </center>|
+
+<h1 align="center">
+  Neovim Dashboard For my taste
+  
+  <p> </p>
+  
+  <img width="1680" alt="moonneovimdashboard" src="https://github.com/your-moon/dashboard-nvim/assets/104183502/b1b4f82c-79d2-4e3d-9e67-953b18471b1d">
+</h1>
 
 # Feature
 

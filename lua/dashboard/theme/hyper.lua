@@ -4,11 +4,11 @@ local ns = api.nvim_create_namespace('dashboard')
 
 local function gen_shortcut(config)
   local shortcut = config.shortcut
-      or {
-        { desc = '[  Github]', group = 'DashboardShortCut' },
-        { desc = '[  your-moon]', group = 'DashboardShortCut' },
-        { desc = '[  0.2.3]', group = 'DashboardShortCut' },
-      }
+    or {
+      { desc = '[  Github]', group = 'DashboardShortCut' },
+      { desc = '[  your-moon]', group = 'DashboardShortCut' },
+      { desc = '[  0.2.3]', group = 'DashboardShortCut' },
+    }
 
   if vim.tbl_isempty(shortcut) then
     shortcut = {}
@@ -84,10 +84,10 @@ local function load_packages(config)
       '',
       'Startuptime: ' .. package_manager_stats.time .. ' ms',
       'Plugins: '
-      .. package_manager_stats.loaded
-      .. ' loaded / '
-      .. package_manager_stats.count
-      .. ' installed',
+        .. package_manager_stats.loaded
+        .. ' loaded / '
+        .. package_manager_stats.count
+        .. ' installed',
     }
   else
     lines = {
@@ -286,7 +286,7 @@ local function map_key(config, key, content)
     local scol = utils.is_win and text:find('%w') or text:find('%p')
     local path = nil
 
-    if scol ~= nil then                        -- scol == nil if pressing enter in empty space
+    if scol ~= nil then -- scol == nil if pressing enter in empty space
       if text:sub(scol, scol + 1) ~= '~/' then -- is relative path
         scol = math.min(text:find('%w'), text:find('%p'))
       end
@@ -441,7 +441,8 @@ end
 local function gen_footer(config)
   local footer = {
     '',
-    " 🚀 Anything I can't do, I don't understand. -- Richard Feynman",
+    " 🚀  Anything I can't do, I don't understand. -- Richard Feynman",
+    'How it is done is as important as getting it done',
   }
 
   if type(config.footer) == 'string' then
@@ -511,8 +512,8 @@ local function theme_instance(config)
     map_key(config, config.confirm_key or '<CR>')
     require('dashboard.events').register_lsp_root(config.path)
     local size = math.floor(vim.o.lines / 2)
-        - math.ceil(api.nvim_buf_line_count(config.bufnr) / 2)
-        - 2
+      - math.ceil(api.nvim_buf_line_count(config.bufnr) / 2)
+      - 2
     local fill = utils.generate_empty_table(size)
     api.nvim_buf_set_lines(config.bufnr, 0, 0, false, fill)
     vim.bo[config.bufnr].modifiable = false
